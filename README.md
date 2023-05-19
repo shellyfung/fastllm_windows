@@ -4,7 +4,7 @@ ChatGLM：清华开源的大模型
 
 fastllm：c++版本的模型推理框架
 
-开发者：http://whchen.net/index.php/About.html
+贡献者：http://whchen.net/index.php/About.html
 
 
 
