@@ -34,8 +34,8 @@ namespace fastllm {
         }
 
         void Reset() {
-            min = std::min(min, 0.f);
-            max = std::max(max, 0.f);
+            min = (std::min)(min, 0.f);
+            max = (std::max)(max, 0.f);
 
             const float qmin = 0;
             const float qmax = (1 << bit) - 1;
@@ -52,7 +52,7 @@ namespace fastllm {
         }
 
         uint8_t quantization(const float &realNumber) const {
-            return (uint8_t) (std::min((double)((1 << bit) - 1), std::max(realNumber / scale + zeroPoint + 0.5, 0.0)));
+            return (uint8_t) ((std::min)((double)((1 << bit) - 1), (std::max)(realNumber / scale + zeroPoint + 0.5, 0.0)));
         }
 
         float invQuantization(const uint8_t &qNumber) const {
